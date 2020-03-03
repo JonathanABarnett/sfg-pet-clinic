@@ -1,0 +1,40 @@
+Dependency Injection (DI)
+
+Dependency Injection is where a needed dependency is injected by another object.
+The class being injected has no responsibility in instantiating the object being injected.
+It's not 100% correct to say you don't declare objects by using new.
+
+
+Types of DI
+ * Class properties - least preferred
+ * Setters
+ * Constructor - most preferred
+
+
+DI can be done with concrete classes or interfaces
+ * Generally concrete classes should be avoided
+DI via interfaces is highly preferred
+ * Allows runtime to decide implementation to inject
+ * Follows Interface Segregation Principle of SOLID
+ * Easier code to test
+
+
+Inversion of Control (IoC)
+ * IoC allow dependencies to be injected at runtime
+ * Dependencies are not predetermined
+
+
+IoC vs DI
+ * DI refers to the composition of your classes
+   * ie - you compose your classes with DI in mind
+ * IoC is the runtime environment of your code
+   * ie - Spring Framework's IoC container
+   * Spring is in control of the injection of dependencies
+
+
+Best Practices
+ * Favor using Constructor Injection over Setter Injection
+ * Use final properties for injected components
+ * Whenever practical, code to an interface
+
+

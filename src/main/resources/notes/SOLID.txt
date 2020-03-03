@@ -1,0 +1,32 @@
+SOLID Principles of OOP
+
+S - Single Responsibility Principle
+    * Every class should have a single responsibility
+    * There should never be more than one reason for a class to change
+    * Your classes should be small. No more than a screen full of code
+    * Avoid 'god'classes
+    * Split big classes into smaller classes
+
+O - Open Closed Principle
+    * Your classes should be open for extension but closed for modification
+    * You should be able to extend a classes behavior, without modifying it
+    * Use private variables with getters and setters - ONLY when you need them
+    * Use abstract base classes
+
+L - Liskov Substitution Principle
+    * Objects in a program would be replaceable with instances of their subtypes
+      without altering the correctness of the program
+    * Violations will often fail the "IS A" test
+    * A square "IS A" rectangle but a rectangle "IS NOT A" square
+
+I - Interface Segregation Principle
+    * Make fine grained interfaces that are client specific
+    * Many client specific interfaces are better than one "general purpose" interface
+    * Keep your components focused and minimize dependencies between them
+
+D - Dependency Inversion Principle
+    * Abstractions should not depend upon details
+    * Details should depend on abstractions
+    * Important that higher level and lower level objects depend on the same abstract interaction
+    * This isn't the same as Dependency Injection (DI) - which is how objects obtain dependent objects
+
