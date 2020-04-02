@@ -1,11 +1,14 @@
 package com.alaythiaproductions.sfgpetclinic.services.map;
 
 import com.alaythiaproductions.sfgpetclinic.model.Speciality;
-import com.alaythiaproductions.sfgpetclinic.services.SpecialitiesService;
+import com.alaythiaproductions.sfgpetclinic.services.SpecialityService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class SpecialtyMapService extends AbstractMapService<Speciality, Long> implements SpecialitiesService {
+@Service
+public class SpecialtyMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
+
     @Override
     public Set<Speciality> findAll() {
         return super.findAll();
