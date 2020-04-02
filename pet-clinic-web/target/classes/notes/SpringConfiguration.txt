@@ -1,0 +1,24 @@
+Spring Configuration Options
+
+XML Based Configurations
+    Introduced in Spring Framework 2.0
+    Common in Legacy Spring Applications
+
+Annotation Based Configurations
+    Introduced in Spring Framework 3.0
+    Picked up via Component Scans
+    Refers to class level annotations ie @Controller, @Service, @Component, @Repository
+
+Java Based Configurations
+    Introduced in Spring Framework 3.0
+    Uses Java Classes to define Spring Beans
+    Configuration classes are defined with @Configuration annotation
+    Beans are declared with @Bean annotation
+
+Groovy Bean Definition Domain Specific Language Configuration
+    Introduced in Spring Framework 4.0
+    Allows you to declare beans in Groovy
+    Borrowed from Grail
+
+All will work together
+Industry trend is to favor Java based configuration

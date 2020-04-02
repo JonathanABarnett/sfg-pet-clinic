@@ -1,0 +1,14 @@
+Spring Bean Scopes
+
+Singleton - (default) Only one instance of the bean is created in the IoC Container
+Prototype - A new instance is created each time the bean is requested
+Request - A single instance per http request. Only valid in the context of a web aware
+        Spring Application Context.
+Session - A single instance per http session. Only valid in the context of a web-aware
+        Spring Application Context
+Global-session - A single instance per global session. Typically only used in a Portlet
+        context. ONly valid in the context of a web aware Spring Context Application.
+Application - bean is scoped to the lifecycle of a ServletContext. Only valid in the
+        context of a web aware Spring Application Context
+Websocket - Scopes a single bean definition to the lifecycle of  WebSocket. Only valid
+        in the context of a web aware Spring Application Context

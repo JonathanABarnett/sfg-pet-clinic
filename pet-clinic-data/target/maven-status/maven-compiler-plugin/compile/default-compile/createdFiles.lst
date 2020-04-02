@@ -1,0 +1,14 @@
+com\alaythiaproductions\sfgpetclinic\model\Person.class
+com\alaythiaproductions\sfgpetclinic\services\VetService.class
+com\alaythiaproductions\sfgpetclinic\services\map\VetServiceMap.class
+com\alaythiaproductions\sfgpetclinic\services\CrudService.class
+com\alaythiaproductions\sfgpetclinic\model\Owner.class
+com\alaythiaproductions\sfgpetclinic\services\map\OwnerServiceMap.class
+com\alaythiaproductions\sfgpetclinic\services\OwnerService.class
+com\alaythiaproductions\sfgpetclinic\model\BaseEntity.class
+com\alaythiaproductions\sfgpetclinic\model\Pet.class
+com\alaythiaproductions\sfgpetclinic\services\PetService.class
+com\alaythiaproductions\sfgpetclinic\model\Vet.class
+com\alaythiaproductions\sfgpetclinic\services\map\PetServiceMap.class
+com\alaythiaproductions\sfgpetclinic\model\PetType.class
+com\alaythiaproductions\sfgpetclinic\services\map\AbstractMapService.class

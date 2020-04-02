@@ -1,0 +1,30 @@
+Request Methods
+
+GET - is a request for a resource (html file, javascript file, image, etc.
+    - used when you visit a website
+
+HEAD - is like GET, but only asks for meta information without the body
+
+POST - is used to post data to the server
+     - typical use case for POST is to post form data to the server
+     - is a create request
+
+PUT - is a request for the enclosed entity to be stored at the supplied URI. If the entity,
+      exists, it is expected to be updated
+    - is a create or update request
+
+DELETE - is a request to delete the specified resource
+
+TRACE - will echo the received request. Can be used to see if request was altered
+        by intermediate servers
+
+OPTIONS - returns the HTTP methods supported by the server for the specified URL
+
+CONNECT - convert the request to a transparent TCP/IP tunnel, typically for HTTPS through an
+          unencrypted HTTP proxy
+
+PATCH - applies partial modifications to the specified resource
+
+Safe Methods - only fetch information and do not cause changes on the server
+    - GET, HEAD, OPTIONS, TRACE
+
