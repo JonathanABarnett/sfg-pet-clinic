@@ -1,10 +1,7 @@
 package com.alaythiaproductions.sfgpetclinic.bootsrap;
 
 import com.alaythiaproductions.sfgpetclinic.model.*;
-import com.alaythiaproductions.sfgpetclinic.services.OwnerService;
-import com.alaythiaproductions.sfgpetclinic.services.PetTypeService;
-import com.alaythiaproductions.sfgpetclinic.services.SpecialityService;
-import com.alaythiaproductions.sfgpetclinic.services.VetService;
+import com.alaythiaproductions.sfgpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,14 @@ public class DataInitializer implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
-    public DataInitializer(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataInitializer(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -71,6 +70,13 @@ public class DataInitializer implements CommandLineRunner {
         owner1.getPets().add(michaelsPet);
 
         ownerService.save(owner1);
+
+        Visit dogVisit = new Visit();
+        dogVisit.setPet(michaelsPet);
+        dogVisit.setDate(LocalDate.now());
+        dogVisit.setDescription("Eating too much grass");
+
+        visitService.save(dogVisit);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Stephen");
