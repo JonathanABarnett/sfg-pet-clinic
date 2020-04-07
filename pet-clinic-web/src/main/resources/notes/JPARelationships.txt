@@ -1,0 +1,53 @@
+Types of Relationships
+
+@OneToOne - One Entity is related to one other entity
+
+@OneToMany - One Entity is related to many entities (List, Set, Map, SortedSet, SortedMap)
+
+@ManyToOne - The inverse relationship of One To Many
+
+@ManyToMany - Many entities are related to many entities, each has a List or Set
+              reference to the other, a join table is used to define the relationship
+
+Unidirectional - is one way. Mapping is only done one way. One side of the relationship
+                 will not know about the other.
+
+Bidirectional - is two way. Both sides know about each other. This is recommended since you
+                can navigate the object graph in either direction.
+
+
+Owning Side
+    - the owning side in the relationship will hold the foreign key in the database
+    - OneToOne is the side where the foreign key is specified
+    - OneToMany and ManyToOne is the 'Many' side
+    - mappedBy is used to define the field with "owns" the reference in a relationship
+
+
+Fetch Type
+    - Lazy Fetch Type - Data is not queried until referenced
+    - Eager Fetch Type - Data is queried up front
+    - Hibernate 5 supports the JPA 2.1 Fetch Type Defaults
+        - OneToMany - Lazy
+        - ManyToOne - Eager
+        - ManyToMany - Lazy
+        - OneToOne - Eager
+
+JPA Cascade Types
+    - REMOVE - Removes all related entities when the owning entity is deleted
+    - DETACH - detaches all related entities if a manual detach occurs
+    - ALL - Applies all the above cascade options
+    - By default no operations are cascaded
+
+Inheritance
+    - MappedSuperclass - Entities inherit form a super class. A database is not created
+                         for the super class.
+    - Single Table (Hibernate Default) - One table is used for a subclass
+    - Joined Table - Base class and subclasses have their own tables. Fetching subclass
+                     entities require a join to the parent table
+    - Table per class - Each subclass has its own table
+
+Create and Update Timestamps
+    - JPA supports @PrePersist and @PreUpdate which can be used ot support audit timestamps
+      via JPA lifecycle callbacks
+    - Hibernate provides @CreationTimestamp and @UpdateTimestamp
+
