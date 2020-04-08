@@ -1,23 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.alaythiaproductions.sfgpetclinic.SfgPetClinicApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.897 s <<< FAILURE! - in com.alaythiaproductions.sfgpetclinic.SfgPetClinicApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.886 s <<< FAILURE! - in com.alaythiaproductions.sfgpetclinic.SfgPetClinicApplicationTests
 contextLoads  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.alaythiaproductions.sfgpetclinic.services.map.OwnerServiceMap] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2cdf8d8a]
-Caused by: java.lang.VerifyError: 
-Bad return type
-Exception Details:
-  Location:
-    com/alaythiaproductions/sfgpetclinic/services/map/OwnerServiceMap.findById(Ljava/lang/Long;)Lcom/alaythiaproductions/sfgpetclinic/model/BaseEntity; @5: areturn
-  Reason:
-    Type 'com/alaythiaproductions/sfgpetclinic/model/Owner' (current frame, stack[0]) is not assignable to 'com/alaythiaproductions/sfgpetclinic/model/BaseEntity' (from method signature)
-  Current Frame:
-    bci: @5
-    flags: { }
-    locals: { 'com/alaythiaproductions/sfgpetclinic/services/map/OwnerServiceMap', 'java/lang/Long' }
-    stack: { 'com/alaythiaproductions/sfgpetclinic/model/Owner' }
-  Bytecode:
-    0000000: 2a2b b600 0ab0                         
-
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.alaythiaproductions.sfgpetclinic.model.Visit.pet references an unknown entity: com.alaythiaproductions.sfgpetclinic.model.Pet
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.alaythiaproductions.sfgpetclinic.model.Visit.pet references an unknown entity: com.alaythiaproductions.sfgpetclinic.model.Pet
 
